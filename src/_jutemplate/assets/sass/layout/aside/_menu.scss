@@ -1,0 +1,151 @@
+//
+// Menu
+//
+
+// Aside menu
+.aside-menu {
+  .menu {
+    // Link padding x
+    @include menu-link-padding-x(get($aside-config, padding-x));
+
+    // Menu indention
+    @include menu-link-indention(
+      get($aside-config, menu-indention),
+      get($aside-config, padding-x)
+    );
+  }
+
+  // Item
+  .menu-item {
+    padding: 0;
+
+    // Menu Link
+    .menu-link {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    // Icon
+    .menu-icon {
+      justify-content: flex-start;
+    }
+  }
+}
+
+// Aside dark theme
+.aside-dark {
+  .hover-scroll-overlay-y {
+    --scrollbar-space: 0.4rem;
+
+    @include scrollbar-color(
+      get($aside-config, scrollbar-color),
+      get($aside-config, scrollbar-hover-color)
+    );
+  }
+
+  .menu {
+    .menu-item {
+      .menu-section {
+        color: #4c4e6f !important;
+      }
+
+      //$title-color, $icon-color, $bullet-color, $arrow-color, $bg-color
+      @include menu-link-default-state(
+        #404143,
+        #494b74,
+        #9899ac,
+        #9899ac,
+        null
+      );
+      @include menu-link-hover-state(#000, $primary, $primary, $white, #fff8dd);
+      @include menu-link-here-state(#000, $primary, $primary, $white, #1b1b28);
+      @include menu-link-show-state(#000, $primary, $primary, $white, #1b1b28);
+      @include menu-link-active-state(
+        #000,
+        $primary,
+        $primary,
+        $white,
+        #fff8dd
+      );
+    }
+  }
+}
+
+// Aside light theme
+.aside-light {
+  .menu {
+    .menu-title {
+      font-weight: 500;
+    }
+  }
+}
+
+span.menu-title.ct {
+  font-size: 15px;
+  font-weight: 400;
+  color: #000000 !important;
+  opacity: 0.8;
+  font-family: 'Poppins';
+  text-transform: capitalize;
+}
+
+a.menu-link.active span.menu-title.ct {
+  font-weight: 600;
+}
+
+.aside-dark .menu .menu-item.show > .menu-link,
+a.menu-link.without-sub.active,
+.aside-dark
+  .menu
+  .menu-item.hover:not(.here)
+  > .menu-link:not(.disabled):not(.active):not(.here),
+.aside-dark
+  .menu
+  .menu-item:not(.here)
+  .menu-link:hover:not(.disabled):not(.active):not(.here) {
+  background-color: #fff8dd70 !important;
+}
+
+// a.menu-link.without-sub:hover,
+.menu-item.menu-accordion:hover {
+  background-color: #fff8dd47 !important;
+}
+
+.aside-dark
+  .menu
+  .menu-item.hover:not(.here)
+  > .menu-link:not(.disabled):not(.active):not(.here)
+  .menu-icon
+  .svg-icon
+  svg
+  [fill]:not(.permanent):not(g),
+.aside-dark
+  .menu
+  .menu-item:not(.here)
+  .menu-link:hover:not(.disabled):not(.active):not(.here)
+  .menu-icon
+  .svg-icon
+  svg
+  [fill]:not(.permanent):not(g) {
+  fill: #3f4254 !important;
+}
+
+.aside-dark
+  .menu
+  .menu-item
+  .menu-link.active
+  .menu-icon
+  .svg-icon
+  svg
+  [fill]:not(.permanent):not(g) {
+  fill: #181c32 !important;
+}
+
+.aside-dark .menu .menu-item.here > .menu-link {
+  background-color: #fff8dd47 !important;
+  color: #000;
+}
+
+.menu-item.menu-accordion.hover.show a.menu-link.without-sub:hover {
+  background-color: transparent !important;
+}

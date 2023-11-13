@@ -1,0 +1,89 @@
+.custom-card-image-box{
+    height:220px;
+}
+
+.admin-card-img{
+    height:80%;
+    width:82%;
+    border-radius: 5px;
+    object-fit:cover;
+}
+
+.custom-card-content-box{
+    height:80px;
+}
+
+.custom-img{
+    height:100%;
+    width:100%;
+    border:3px solid whitesmoke;
+    border-radius:4px;
+    object-fit:cover;
+    padding: 2px;
+}
+
+.workshop-details-Box{
+    height: 40px;
+    background-color:beige ;
+    margin-left:10px;
+}
+
+.workshop-details-img-box{
+    width: auto;
+    height:250px;
+}
+
+.details-box-type{
+    width:auto;
+    min-height:50px;
+    background-color:#F5F8FA;
+    border-radius:5px;
+}
+.svg-icon-sidebar-new{
+    height: 17px !important;
+    width: 25px !important;
+    fill:gray
+}
+
+.mcq .table.gs-0 td:first-child {
+    width: 40%;
+}
+.cross .table.gs-0 td:first-child {
+    width: 40%;
+}
+
+.aside.aside-dark {
+    background: transparent linear-gradient(180deg, #f2ccc4 0%, #f1d1a6 100%)
+    0% 0% no-repeat padding-box !important;
+}
+
+.dashboard-context-box {
+    background-color:#fff5f8!important
+}
+
+@media screen and (max-width:768px) {
+    .form-m-top_upto_md {
+      margin-top: 17px !important;
+    }
+  }
+
+@media screen and (max-width:768px) {
+    .form-m-top_upto_md_mcq_option {
+      margin-top: 15px !important;
+    }
+  }
+
+  @media screen and (max-width: 466px) {
+    .Add_new_button {
+      margin-top: 25px !important;
+      white-space: nowrap;
+    }
+  }
+
+ .deshboard-box-height{
+    height:140px !important;
+ } 
+
+ .deshboard-box-header-height{
+    height: 60% !important;
+ } 
